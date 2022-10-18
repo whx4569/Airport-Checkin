@@ -29,7 +29,7 @@ if (total.indexOf('&') > -1) {
         $.email = totalList[i].split(',')[1].split(':')[0];
         // 密码
         $.pwd = totalList[i].split(',')[1].split(':')[1];
-        console.log(`\n*****开始第【${$.index}】个网站****\n`);
+        console.log(`\n*****开始【${$.SITE_URL}】****\n`);
         await main();
         await $.wait(2000)
     }
@@ -89,7 +89,7 @@ function checkin() {
                 } else {
                     console.log('开始进行签到...\n');
                     data = JSON.parse(data);
-                    message += `开始第【${$.index}】个网站\n`;
+                    message += `开始签到【${$.SITE_URL}】\n`;
                     if (data.ret === 1) {
                         if (data.trafficInfo) {
                             console.log(`${data.msg}\n今日已用：${data.trafficInfo.todayUsedTraffic}\n过去已用：${data.trafficInfo.lastUsedTraffic}\n剩余流量：${data.trafficInfo.unUsedTraffic}\n\n`);
